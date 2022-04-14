@@ -6,20 +6,19 @@ import Cards from "./Card";
 import Footer from "./Footer";
 
 function App() {
-  const theme = createTheme({
-  });
+  const theme = createTheme({});
 
   return (
     <ThemeProvider theme={theme}>
       <Header />
-      <main>
-        <Cards
-          casos="Casos registrados"
-          mortes="Total de mortes"
-          recuperados="Recuperados"
-          totalTestes="Testes realizados"
-        />
-      </main>
+
+      <Cards
+        casos="Casos registrados"
+        mortes="Total de mortes"
+        recuperados="Recuperados"
+        totalTestes="Testes realizados"
+      />
+
       <Footer />
     </ThemeProvider>
   );
