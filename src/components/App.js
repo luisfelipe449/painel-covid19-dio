@@ -1,7 +1,6 @@
 import "./App.css";
 import React from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import Header from "./Header";
 import Cards from "./Card";
 import Footer from "./Footer";
 
@@ -10,7 +9,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Header />
+      
 
       <Cards
         casos="Casos registrados"

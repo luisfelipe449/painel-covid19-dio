@@ -13,6 +13,7 @@ import usa from "../../assets/usa.png";
 import germany from "../../assets/germany.png";
 import china from "../../assets/china.png";
 import italy from "../../assets/italy.png";
+import Header from "../Header";
 
 export default function Cards(props) {
   const [country, setCountry] = useState({});
@@ -32,6 +33,7 @@ export default function Cards(props) {
 
   return (
     <>
+      <Header pais={query} />
       <div className="country-btns">
         <Button value="Brazil" onClick={(e) => setQuery(e.target.value)}>
           <img src={brazil} alt="brasil" />
@@ -55,7 +57,7 @@ export default function Cards(props) {
         </Button>
       </div>
       {loading ? (
-       <div className="loader"></div>
+        <div className="loader"></div>
       ) : (
         <div className="container">
           <div className="card-wrapper">
