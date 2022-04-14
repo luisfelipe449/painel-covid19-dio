@@ -1,31 +1,27 @@
 import "./App.css";
-import React, { useEffect, useState } from "react";
-import api from "../services/api";
+import React from "react";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import Header from "./Header";
+import Cards from "./Card";
+import Footer from "./Footer";
 
 function App() {
-  const [country, setCountry] = useState([]);
+  const theme = createTheme({
+  });
 
-  async function getCountry() {
-    try {
-      const response = await api.get("/countries/brazil");
-      setCountry(response.data);
-      console.log(response);
-    } catch (error) {
-      console.error(error);
-    }
-  }
-
-  useEffect(() => {
-    getCountry();
-  }, []);
   return (
-    <>
-      <h1>{country.country}</h1>
-      <p>{country.cases}</p>
-      <p>{country.active}</p>
-      <p>{country.deaths}</p>
-      <p>{country.recovered}</p>
-    </>
+    <ThemeProvider theme={theme}>
+      <Header />
+      <main>
+        <Cards
+          casos="Casos registrados"
+          mortes="Total de mortes"
+          recuperados="Recuperados"
+          totalTestes="Testes realizados"
+        />
+      </main>
+      <Footer />
+    </ThemeProvider>
   );
 }
 

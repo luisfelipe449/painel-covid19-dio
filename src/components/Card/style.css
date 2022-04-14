@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card-wrapper {
+  text-align: center;
+  margin: 10px;
+}
+
+.css-1t6e9jv-MuiCardActions-root {
+  justify-content: center;
+}
+
+.country-btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
