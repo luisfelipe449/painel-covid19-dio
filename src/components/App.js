@@ -2,7 +2,6 @@ import "./App.css";
 import React from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Cards from "./Card";
-import Footer from "./Footer";
 
 function App() {
   const theme = createTheme({});
@@ -17,8 +16,6 @@ function App() {
         recuperados="Recuperados"
         totalTestes="Testes realizados"
       />
-
-      <Footer />
     </ThemeProvider>
   );
 }
