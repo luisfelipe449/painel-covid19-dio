@@ -1,17 +1,14 @@
 import "./App.css";
-import axios from "axios";
 import React, { useEffect, useState } from "react";
+import api from "../services/api";
 
 function App() {
-  const [data, setData] = useState([]);
+  const [country, setCountry] = useState([]);
 
-  // Quer usar async/await? Adicione o prefixo `async` na sua função/método
-  async function getUser() {
+  async function getCountry() {
     try {
-      const response = await axios.get(
-        "https://coronavirus-19-api.herokuapp.com/countries/brazil"
-      );
-      setData(response.data);
+      const response = await api.get("/countries/brazil");
+      setCountry(response.data);
       console.log(response);
     } catch (error) {
       console.error(error);
@@ -19,14 +16,15 @@ function App() {
   }
 
   useEffect(() => {
-    getUser();
+    getCountry();
   }, []);
-
   return (
     <>
-      {data.map((datas) => {
-        return <p>{datas.cases}</p>;
-      })}
+      <h1>{country.country}</h1>
+      <p>{country.cases}</p>
+      <p>{country.active}</p>
+      <p>{country.deaths}</p>
+      <p>{country.recovered}</p>
     </>
   );
 }
