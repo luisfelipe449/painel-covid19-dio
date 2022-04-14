@@ -61,7 +61,7 @@ export default function Cards(props) {
       ) : (
         <div className="container">
           <div className="card-wrapper">
-            <Card sx={{ width: 500, borderRadius: 5, boxShadow: 10 }}>
+            <Card sx={{ width: 450, borderRadius: 5, boxShadow: 10 }}>
               <CardContent>
                 <Typography
                   sx={{ fontSize: 24 }}
@@ -87,7 +87,7 @@ export default function Cards(props) {
             </Card>
           </div>
           <div className="card-wrapper">
-            <Card sx={{ width: 500, borderRadius: 5, boxShadow: 10 }}>
+            <Card sx={{ width: 450, borderRadius: 5, boxShadow: 10 }}>
               <CardContent>
                 <Typography
                   sx={{ fontSize: 24 }}
@@ -113,7 +113,7 @@ export default function Cards(props) {
             </Card>
           </div>
           <div className="card-wrapper">
-            <Card sx={{ width: 500, borderRadius: 5, boxShadow: 10 }}>
+            <Card sx={{ width: 450, borderRadius: 5, boxShadow: 10 }}>
               <CardContent>
                 <Typography
                   sx={{ fontSize: 24 }}
@@ -139,7 +139,7 @@ export default function Cards(props) {
             </Card>
           </div>
           <div className="card-wrapper">
-            <Card sx={{ width: 500, borderRadius: 5, boxShadow: 10 }}>
+            <Card sx={{ width: 450, borderRadius: 5, boxShadow: 10 }}>
               <CardContent>
                 <Typography
                   sx={{ fontSize: 24 }}
